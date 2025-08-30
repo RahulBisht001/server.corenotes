@@ -5,6 +5,7 @@ async function connectDB(uri) {
             autoIndex: true,
         });
         console.log("MongoDB connected");
+        console.log("hello")
     } catch (err) {
         console.error("MongoDB connection error:", err.message);
         process.exit(1);
