@@ -4,7 +4,7 @@ const Notes = require("../models/notes.model");
 
 const getAllNotesByFilter = async (req, res) => {
 	try {
-		const filter = req.params.filter || "CSE";
+		const filter = req.params.filter || "computer-science";
 
 		// console.log(Notes.schema);
 

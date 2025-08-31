@@ -8,7 +8,7 @@ const NotesSchema = new mongoose.Schema({
 	branch: {
 		type: String,
 		required: true,
-		enum: ["CSE", "IT", "ECE", "MECH", "EEE", "CIVIL", "OTHERS"],
+		enum: ["computer-science", "electronics", "chemical", "mechanical", "civil", "electrical"],
 		default: "CSE",
 	},
 	thumbnail: {
