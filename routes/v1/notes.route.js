@@ -1,6 +1,9 @@
 const express = require("express");
 const notesRouter = express.Router();
-const { getAllNotesByFilter } = require("../../controllers/notes.controller");
+const {
+	getAllNotesByBranch,
+	getNotesForSubject,
+} = require("../../controllers/notes.controller");
 
 // Default route
 notesRouter.get("/", (req, res) => {
@@ -8,6 +11,7 @@ notesRouter.get("/", (req, res) => {
 });
 
 // Route with branch filter
-notesRouter.get("/:filter", getAllNotesByFilter);
+notesRouter.get("/:branch", getAllNotesByBranch);
+notesRouter.get("/:branch/:subject", getNotesForSubject);
 
 module.exports = notesRouter;
